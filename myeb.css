@@ -1,0 +1,105 @@
+
+/* ===== BASE ===== */
+body{
+font-family: Verdana;
+margin: 0px;
+}
+
+/* ===== TOP BAR ===== */
+.topbar{
+display:flex;
+justify-content: space-between;
+align-items: center;
+background-color: darkblue;
+color:white;
+padding:15px 25px;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+/* ===== MENU ===== */
+.menu{
+display:flex;
+gap:15px;
+}
+
+.menu a{
+color:white;
+text-decoration: none;
+}
+
+.menu a:hover{
+background:lightblue;
+color:black;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main{
+display:grid;
+grid-template-columns: 2fr 1fr;
+gap:15px;
+padding:15px;
+}
+
+/* CONTENT */
+.content{
+background:#f4f4f4;
+padding:20px;
+}
+
+/* SIDEBAR */
+.side{
+background:#ddd;
+padding:15px;
+}
+
+/* ===== CARDS (FLEXBOX) ===== */
+.cards{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+border:1px solid #ccc;
+padding:10px;
+width:100px;
+text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.card:hover{
+    background-color: blue;
+    text-transform: lowercase;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media screen and (max-width:700px){
+
+.main{
+grid-template-columns:1fr;
+}
+
+.cards{
+flex-direction: column;
+}
+
+}
+
+/* ===== FOOTER ===== */
+.bottom{
+background:black;
+color:white;
+text-align:center;
+padding:15px;
+
+}
