@@ -1,105 +1,86 @@
 
-/* ===== BASE ===== */
+/* ===== BASE NG PAGE===== */
 body{
 font-family: Verdana;
 margin: 0px;
 }
 
 /* ===== TOP BAR ===== */
-.topbar{
-display:flex;
-justify-content: space-between;
-align-items: center;
-background-color: darkblue;
-color:white;
-padding:15px 25px;
+    .topbar{
+        display:flex;
+        justify-content: space-between;
+        align-items: stretch;
+        background-color: #FFB6EB;
+        color:white;
+        padding:0x 25px;
+
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
+    .logo{
+        font-size:24px;
+        font-weight:bold;
+        color: black;
+        padding: 15px 20px;
+        align-items: center;
 }
 
-/* ===== MENU ===== */
-.menu{
-display:flex;
-gap:15px;
+/* ===== MENU // Home, About me, Credentials, Contact button===== */
+    .menu{
+        display:flex;
+        gap:0px;
 }
 
-.menu a{
-color:white;
-text-decoration: none;
-}
+    .menu a{
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color:rgb(0, 0, 0);
+        text-decoration: none;
 
-.menu a:hover{
-background:lightblue;
-color:black;
+}
+/*---kapag hinover iiba kulay sa content ---*/
+    .menu a:hover{
+        background:rgb(188, 99, 181);
+        color:black;
 }
 
 /* ===== MAIN LAYOUT ===== */
-.main{
-display:grid;
-grid-template-columns: 2fr 1fr;
-gap:15px;
-padding:15px;
+    .main{
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        gap:15px;
+        padding:15px;
 }
 
 /* CONTENT */
-.content{
-background:#f4f4f4;
-padding:20px;
+    .content{
+        background:#f4f4f4;
+        padding:20px;
 }
 
 /* SIDEBAR */
-.side{
-background:#ddd;
-padding:15px;
+    .side{
+        background:#ddd;
+        padding:15px;
 }
 
-/* ===== CARDS (FLEXBOX) ===== */
-.cards{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.card{
-background:white;
-border:1px solid #ccc;
-padding:10px;
-width:100px;
-text-align: center;
-}
-
-nav a{
-    text-decoration: none;
-    color: black;
-    
-}
-
-.card:hover{
-    background-color: blue;
-    text-transform: lowercase;
-}
-
-/* ===== MEDIA QUERY ===== */
+/* ===== MEDIA QUERY PARA RESPONSIVE ===== */
 @media screen and (max-width:700px){
 
-.main{
-grid-template-columns:1fr;
+    .main{
+        grid-template-columns:1fr;
+    }
+    .cards{
+    flex-direction: column;
 }
 
-.cards{
-flex-direction: column;
-}
 
 }
 
 /* ===== FOOTER ===== */
-.bottom{
-background:black;
-color:white;
-text-align:center;
-padding:15px;
-
+    .bottom{
+        background:black;
+        color:white;
+        text-align:center;
+        padding:15px;
 }
