@@ -5,6 +5,11 @@ font-family: Verdana;
 margin: 0px;
 }
 
+/* ===== size ng section ng screen ===== */
+section{
+    min-height: 100vh;   /* each section is at least one full screen */
+}
+
 /* ===== TOP BAR ===== */
     .topbar{
         display:flex;
@@ -51,33 +56,22 @@ margin: 0px;
             font-weight: bolder;
             padding: 0 40px;
             margin: 8px 0 8px 15px;
-            border-radius: 12px;
+            border-radius: 20px;
 
         }
         .menu a.contact:hover{
-            background-color: #fff7ae;
+            background-color: #b5ad62;
 
         }
 
 /* ===== MAIN LAYOUT ===== */
-    .main{
-        display:grid;
-        grid-template-columns: 2fr 1fr;
-        gap:15px;
-        padding:15px;
-    }
+         .main{
+            display:grid;
+            grid-template-columns: 2fr 1fr;
+            gap:15px;
+            padding:15px;
+        }       
 
-/* CONTENT */
-    .content{
-        background:#f4f4f4;
-        padding:20px;
-    }
-
-/* SIDEBAR */
-    .side{
-        background:#ddd;
-        padding:15px;
-    }
 
 /* ===== MEDIA QUERY PARA RESPONSIVE ===== */
 @media screen and (max-width:700px){
@@ -92,10 +86,30 @@ margin: 0px;
 
     }
 
-/* ===== FOOTER ===== */
+/* ===== SECTIONING ===== */
+    .hero{
+        min-width: 100vh;
+        padding: 80px, 10%;
+        background-color:#2F3D46;
+    }
+    .about{
+        min-height: 100vh;
+        padding: 80px, 10%;
+        background-color: #FFB6EB;
+    }
+    .credential{
+        min-height: 100vh;
+        padding: 80px 10%;
+        background-color: #fff7ae;
+    }
+    .contact-section{
+        min-height: 100vh;
+        padding: 80px, 10%;
+        background-color: #2F3D46;
+    }
+
+    /* ===== FOOTER ARE ===== */
     .bottom{
-        background:black;
-        color:white;
-        text-align:center;
-        padding:15px;
+        padding: 30px;
+        background-color: black;
     }
