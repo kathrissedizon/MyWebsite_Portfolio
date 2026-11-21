@@ -14,7 +14,7 @@ margin: 0px;
         color:white;
         padding:0x 25px;
 
-}
+    }
 
     .logo{
         font-size:24px;
@@ -22,13 +22,13 @@ margin: 0px;
         color: black;
         padding: 15px 20px;
         align-items: center;
-}
+    }
 
 /* ===== MENU // Home, About me, Credentials, Contact button===== */
     .menu{
         display:flex;
         gap:0px;
-}
+    }
 
     .menu a{
         display: flex;
@@ -37,12 +37,27 @@ margin: 0px;
         color:rgb(0, 0, 0);
         text-decoration: none;
 
-}
+    }
 /*---kapag hinover iiba kulay sa content ---*/
     .menu a:hover{
         background:rgb(188, 99, 181);
-        color:black;
-}
+        color:black;    
+    }
+/*contact*/
+        .menu a.contact{
+            background-color:#fff7ae;
+            color: black;
+            font-size: 18px;
+            font-weight: bolder;
+            padding: 0 40px;
+            margin: 8px 0 8px 15px;
+            border-radius: 12px;
+
+        }
+        .menu a.contact:hover{
+            background-color: #fff7ae;
+
+        }
 
 /* ===== MAIN LAYOUT ===== */
     .main{
@@ -50,19 +65,19 @@ margin: 0px;
         grid-template-columns: 2fr 1fr;
         gap:15px;
         padding:15px;
-}
+    }
 
 /* CONTENT */
     .content{
         background:#f4f4f4;
         padding:20px;
-}
+    }
 
 /* SIDEBAR */
     .side{
         background:#ddd;
         padding:15px;
-}
+    }
 
 /* ===== MEDIA QUERY PARA RESPONSIVE ===== */
 @media screen and (max-width:700px){
@@ -75,7 +90,7 @@ margin: 0px;
 }
 
 
-}
+    }
 
 /* ===== FOOTER ===== */
     .bottom{
@@ -83,4 +98,4 @@ margin: 0px;
         color:white;
         text-align:center;
         padding:15px;
-}
+    }
