@@ -1,115 +1,236 @@
-
-/* ===== BASE NG PAGE===== */
-body{
-font-family: Verdana;
-margin: 0px;
+/* ===== BASE NG PAGE ===== */
+*{
+    box-sizing: border-box;   /* para hindi lumaki ang mga element dahil sa padding */
 }
 
-/* ===== size ng section ng screen ===== */
+body{
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== SIZE NG BAWAT SECTION ===== */
 section{
-    min-height: 100vh;   /* each section is at least one full screen */
+    min-height: 100vh;
 }
 
 /* ===== TOP BAR ===== */
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #FFB6EB;
+    padding: 0 35px;
+}
+
+.logo{
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: bold;
+    color: black;
+    padding: 15px 20px;
+}
+
+/* ===== MENU ===== */
+.menu{
+    display: flex;
+    gap: 0;
+}
+
+.menu a{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    background: rgb(188, 99, 181);
+    color: black;
+}
+
+/* ===== CONTACT BUTTON ===== */
+.menu a.contact{
+    background-color: #fff7ae;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 0 40px;
+    margin: 8px 0 8px 15px;
+    border-radius: 20px;
+}
+
+.menu a.contact:hover{
+    background-color: #b5ad62;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.cards{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ===== HERO ===== */
+.hero{
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 10%;
+    overflow: hidden;   /* para walang sideways scroll */
+    background: linear-gradient(to top, #a64676, #2F3D46 20%);
+}
+
+/* Pangalan (outline) */
+.nameonly{
+    position: absolute;
+    top: 12%;
+    left: 6%;
+    margin: 0;
+    font-size: clamp(50px, 9vw, 130px);
+    line-height: 1.1;
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    z-index: 1;
+}
+
+/* Gege (puti + outline) */
+.nickname{
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+    margin: 0;
+    font-size: clamp(60px, 12vw, 150px);
+    font-weight: 800;
+    color: #ffffff;
+    z-index: 1;
+    line-height: 1.1;
+}
+
+.nickname::after{
+    content: "Gege";
+    position: absolute;
+    left: -8px;
+    top: -10px;
+    color: transparent;
+    -webkit-text-stroke: 3px white;
+    
+}
+
+/* Gege (dilaw) */
+.nicknsolidcolor{
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    margin: 0;
+    font-size: clamp(60px, 12vw, 150px);
+    font-weight: 800;
+    color: #fff7ae;
+    z-index: 3;
+    line-height: 1.1;
+}
+
+/* Photo: nasa gitna sa baba */
+.homephoto{
+    width: 500px;
+    height: auto;
+    
+    
+}
+
+/* ===== ABOUT / CREDENTIALS / CONTACT ===== */
+.about{
+    padding: 80px 10%;
+    background: linear-gradient(to top, #FFB6EB 70%, #a64676);
+}
+.credential,
+.credentials{
+    padding: 80px 10%;
+    background: linear-gradient(to top, #fff7ae 70%, #FFB6EB);
+}
+
+.contact-section{
+    padding: 80px 10%;
+    background: linear-gradient(to top, #f9f9f9 70%, #fff7ae);
+}
+
+/* ===== FOOTER ===== */
+.bottom{
+    padding: 30px;
+    background-color: black;
+}
+
+/* ===== RESPONSIVE: TABLET ===== */
+@media screen and (max-width: 1024px){
+    .hero,
+    .about,
+    .credential,
+    .credentials,
+    .contact-section{
+        padding: 60px 6%;
+    }
+}
+
+/* ===== RESPONSIVE: PHONE ===== */
+@media screen and (max-width: 700px){
+
     .topbar{
-        display:flex;
-        justify-content: space-between;
-        align-items: stretch;
-        background-color: #FFB6EB;
-        color:white;
-        padding:0x 25px;
-
-    }
-
-    .logo{
-        font-size:24px;
-        font-weight:bold;
-        color: black;
-        padding: 15px 20px;
+        flex-direction: column;
         align-items: center;
+        padding: 0 10px;
     }
-
-/* ===== MENU // Home, About me, Credentials, Contact button===== */
     .menu{
-        display:flex;
-        gap:0px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .menu a{
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        color:rgb(0, 0, 0);
-        text-decoration: none;
-
-    }
-/*---kapag hinover iiba kulay sa content ---*/
-    .menu a:hover{
-        background:rgb(188, 99, 181);
-        color:black;    
-    }
-/*contact*/
-        .menu a.contact{
-            background-color:#fff7ae;
-            color: black;
-            font-size: 18px;
-            font-weight: bolder;
-            padding: 0 40px;
-            margin: 8px 0 8px 15px;
-            border-radius: 20px;
-
-        }
-        .menu a.contact:hover{
-            background-color: #b5ad62;
-
-        }
-
-/* ===== MAIN LAYOUT ===== */
-         .main{
-            display:grid;
-            grid-template-columns: 2fr 1fr;
-            gap:15px;
-            padding:15px;
-        }       
-
-
-/* ===== MEDIA QUERY PARA RESPONSIVE ===== */
-@media screen and (max-width:700px){
-
-    .main{
-        grid-template-columns:1fr;
-    }
-    .cards{
-    flex-direction: column;
-}
-
-
+        padding: 12px 14px;
     }
 
-/* ===== SECTIONING ===== */
+    .menu a.contact{
+        padding: 8px 20px;
+        margin: 8px;
+    }
+
     .hero{
-        min-width: 100vh;
-        padding: 80px, 10%;
-        background-color:#2F3D46;
-    }
-    .about{
-        min-height: 100vh;
-        padding: 80px, 10%;
-        background-color: #FFB6EB;
-    }
-    .credential{
-        min-height: 100vh;
-        padding: 80px 10%;
-        background-color: #fff7ae;
-    }
-    .contact-section{
-        min-height: 100vh;
-        padding: 80px, 10%;
-        background-color: #2F3D46;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 5% 0;
     }
 
-    /* ===== FOOTER ARE ===== */
-    .bottom{
-        padding: 30px;
-        background-color: black;
+    .nameonly{
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        -webkit-text-stroke: 2px white;
     }
+
+    .homephoto{
+        position: relative;
+        left: auto;
+        transform: none;
+        margin-top: auto;   /* itutulak sa baba ng hero */
+    }
+
+    .nickname::after{
+        -webkit-text-stroke: 2px white;
+    }
+}
